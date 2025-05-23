@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    padding: 24px 156px;
+    gap: 24px;
+    list-style: none;
+
+}
+
+.gallery-image {
+    display: block;
+    width: 360px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
