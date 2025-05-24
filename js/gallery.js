@@ -90,15 +90,14 @@ galleryContainer.addEventListener("click", handeClick);
 // коли клікну на зображення, я викличу ф-ю handeClick
 function handeClick(event) {
   event.preventDefault(); //прибираю дефолтну поведінку браузера
-    if (!event.target.classList.contains("gallery-image"))  // перевіряю, чи клік був по img
-        return; // якщо ні, припиняю ф-ю
-  
-    const largeImageUrl = event.target.dataset.source; // якщо так,то отримую посилання на велике зображення в data-source
-  
+  if (!event.target.classList.contains("gallery-image"))
+    // перевіряю, чи клік був по img
+    return; // якщо ні, припиняю ф-ю
+
+  const largeImageUrl = event.target.dataset.source; // якщо так,то отримую посилання на велике зображення в data-source
+
   const instance = basicLightbox.create(`
         <img src="${largeImageUrl}" width="800" height="600">
       `);
-  instance.show();  // модалка
+  instance.show(); // модалка
 }
-
-
